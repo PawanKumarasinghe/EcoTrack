@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>EcoTrack - Sustainable Living Dashboard</title>
+    <style>
+/* Style the featured projects section */
+.featured-projects {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.project-card h3 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.project-card p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.project-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.project-card .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Style the latest news section */
+.latest-news {
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.news-article {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.news-article:hover {
+    transform: translateY(-5px);
+}
+
+.news-article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.news-article h3 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.news-article p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.news-article .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:#00796b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.news-article .btn:hover {
+    background-color: #0056b3;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="src/viwe/index.html">Home</a></li>
+                <li><a href="src/viwe/ecodashboard.html">Eco Dashboard</a></li>
+                <li><a href="src/viwe/ecotips.html">Eco Tips</a></li>
+                <li><a href="src/viwe/community.html">Community</a></li>
+                <li><a href="src/viwe/aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Welcome to EcoTrack</h1>
+            <p>Your sustainable living dashboard</p>
+        </section>
+        <section class="carbon-calculator">
+            <h2>Carbon Footprint Calculator</h2>
+            <div id="app">
+                <label for="miles">Miles Driven:</label>
+                <input type="number" id="miles" v-model="miles" placeholder="Enter miles driven">
+                <p class="result">Total CO2 Emissions: <span>{{ calculateCO2() }}</span> lbs</p>
+            </div>
+        </section>
+        <section class="featured-projects">
+            <h2>Featured Eco Projects</h2>
+            <div class="project-card">
+                <img src="src/assets/project/project1.jpg" alt="Featured Project 1">
+                <h3>Project 1: Renewable Energy Initiative</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis nisi ut velit luctus suscipit.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="project-card">
+                <img src="src/assets/project/project2.jpg" alt="Featured Project 2">
+                <h3>Project 2: Zero Waste Campaign</h3>
+                <p>Nullam vulputate odio nec massa dignissim, eu dapibus ex volutpat. Nulla facilisi.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </section>
+        
+        <section class="latest-news">
+            <h2>Latest Eco News</h2>
+            <div class="news-article">
+                <img src="src/assets/news/new1.jpg" alt="News Article 1">
+                <h3>News Article 1: Climate Action Summit</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non erat vitae sem cursus porta.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="news-article">
+                <img src="src/assets/news/new2.jpg" alt="News Article 2">
+                <h3>News Article 2: Sustainable Food Production</h3>
+                <p>Proin maximus odio a libero vehicula, eget aliquet ante egestas. Integer in condimentum quam.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="EcoTrack Logo">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="src/viwe/index.html">Home</a></li>
+                    <li><a href="src/viwe/ecodashboard.html">Eco Dashboard</a></li>
+                    <li><a href="src/viwe/ecotips.html">Eco Tips</a></li>
+                    <li><a href="src/viwe/community.html">Community</a></li>
+                    <li><a href="src/viwe/aboutus.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <p>Contact us: info@ecotrack.com</p>
+            </div>
+        </div>
+        <p>&copy; 2023 EcoTrack</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.11"></script>
+    <script src="app.js"></script>
+</body>
+</html>
